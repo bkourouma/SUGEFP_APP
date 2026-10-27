@@ -23,6 +23,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD}
+      GLIBC_TUNABLES: "glibc.pthread.rseq=1"
     ports:
       - "127.0.0.1:27017:27017"
     volumes:
